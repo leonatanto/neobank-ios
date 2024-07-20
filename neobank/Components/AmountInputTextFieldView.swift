@@ -27,6 +27,7 @@ class AmountInputTextFieldView: UIView, UITextFieldDelegate {
         let textField = UITextField()
         textField.placeholder = "Enter amount"
         textField.borderStyle = .roundedRect
+        textField.keyboardType = .numberPad
         return textField
     }()
     

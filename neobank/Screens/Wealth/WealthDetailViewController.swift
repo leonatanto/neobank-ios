@@ -236,10 +236,12 @@ class WealthDetailViewController: UIViewController, UIGestureRecognizerDelegate 
         super.viewDidLoad()
         setupUI()
         setupConstraints()
-        btnBack.addTarget(self, action: #selector(onBackButtonPressed), for: .touchUpInside)
-        btnRollover.addTarget(self, action: #selector(onPressRollover), for: .touchUpInside)
-        btnOpenNow.addTarget(self, action: #selector(onNavigateToPayment), for: .touchUpInside)
-        
+        setupNavigationBar()
+        setupButton()
+        onChangeTextField()
+    }
+    
+    private func onChangeTextField() {
         tfAmount.onValueChange = { [weak self] newValue in
             guard let self = self else { return }
             guard let valueWithoutGroupingSeparator = newValue.replacingOccurrences(of: ".", with: "") as String? else { return }
@@ -253,6 +255,21 @@ class WealthDetailViewController: UIViewController, UIGestureRecognizerDelegate 
             if let formattedInterest = self.numberFormatter.string(from: NSNumber(value: monthlyInterest)) {
                 self.lblInterestValue.text = "Rp \(formattedInterest)"
             }
+        }
+    }
+    
+    private func setupButton() {
+        btnBack.addTarget(self, action: #selector(onBackButtonPressed), for: .touchUpInside)
+        btnRollover.addTarget(self, action: #selector(onPressRollover), for: .touchUpInside)
+        btnOpenNow.addTarget(self, action: #selector(onNavigateToPayment), for: .touchUpInside)
+    }
+    
+    private func setupNavigationBar() {
+        self.navigationItem.hidesBackButton = true
+        
+        if let navigationController = self.navigationController {
+            navigationController.interactivePopGestureRecognizer?.isEnabled = true
+            navigationController.interactivePopGestureRecognizer?.delegate = self
         }
     }
     
@@ -422,16 +439,16 @@ class WealthDetailViewController: UIViewController, UIGestureRecognizerDelegate 
     
 }
 
-//extension WealthDetailViewController: UITextFieldDelegate {
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        textField.resignFirstResponder() // Dismisses when tap return
-//        return true
-//    }
-//
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        self.view.endEditing(true) // Dismisses when tap outside keyboard
-//    }
-//}
+extension WealthDetailViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // Dismisses when tap return
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true) // Dismisses when tap outside keyboard
+    }
+}
 
 extension WealthDetailViewController: BottomSheetDelegate {
     func didSelectOption(selectedIndex: Int) {

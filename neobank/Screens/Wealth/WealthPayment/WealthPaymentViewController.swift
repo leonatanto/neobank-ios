@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WealthPaymentViewController: UIViewController {
+class WealthPaymentViewController: UIViewController, UIGestureRecognizerDelegate {
     private var expandedSections: Set<Int> = []
     private var countdownTimer: Timer?
     private var remainingTime: TimeInterval = 24 * 60 * 60 // 24 hours in second
@@ -121,15 +121,17 @@ class WealthPaymentViewController: UIViewController {
         super.viewDidLoad()
         
         viewModel = WealthPaymentViewModel()
-        
         setupNavigationBar()
         setupUI()
         startCountdown()
-        view.backgroundColor = .white
     }
     
-    
     private func setupNavigationBar() {
+        if let navigationController = self.navigationController {
+            navigationController.interactivePopGestureRecognizer?.isEnabled = true
+            navigationController.interactivePopGestureRecognizer?.delegate = self
+        }
+        
         navigationItem.hidesBackButton = true
     }
     
@@ -155,6 +157,8 @@ class WealthPaymentViewController: UIViewController {
     }
     
     private func setupUI() {
+        view.backgroundColor = .white
+        
         view.addSubview(topContainer)
         view.addSubview(bottomContainer)
         view.addSubview(btnBack)

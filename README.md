@@ -46,5 +46,5 @@ Navigate to the cloned directory and open neobank-ios.xcodeproj with Xcode
 ## Requirements
 This project requires the following:
 
-iOS 16.4+ :apple:
-Xcode 15.2 :xcode:
+-iOS 16.4+ 
+-Xcode 15.2
