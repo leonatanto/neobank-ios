@@ -7,23 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC2FCC6A2C47B38100ECB32E /* WealthDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2FCC692C47B38100ECB32E /* WealthDetailViewController.swift */; };
+		AC2FCC6C2C47E29200ECB32E /* AmountInputTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2FCC6B2C47E29200ECB32E /* AmountInputTextFieldView.swift */; };
+		AC2FCC732C48390E00ECB32E /* RolloverSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2FCC722C48390E00ECB32E /* RolloverSheetViewController.swift */; };
+		AC2FCC762C483C6500ECB32E /* WebviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2FCC752C483C6500ECB32E /* WebviewViewController.swift */; };
+		AC52D3302C490770000ACE78 /* WealthListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52D32F2C490770000ACE78 /* WealthListViewModel.swift */; };
+		AC52D3322C4936F1000ACE78 /* RolloverOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52D3312C4936F1000ACE78 /* RolloverOptions.swift */; };
+		AC52D3352C493F44000ACE78 /* WealthPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52D3342C493F44000ACE78 /* WealthPaymentViewController.swift */; };
+		AC52D3392C495563000ACE78 /* PaymentMethodCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52D3382C495563000ACE78 /* PaymentMethodCardView.swift */; };
+		AC52D33B2C4956AA000ACE78 /* CollapsibleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52D33A2C4956AA000ACE78 /* CollapsibleTableViewCell.swift */; };
+		AC52D33D2C498320000ACE78 /* OptionRolloverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52D33C2C498320000ACE78 /* OptionRolloverTableViewCell.swift */; };
 		ACE3A6D02C46A1E400D147CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE3A6CF2C46A1E400D147CB /* AppDelegate.swift */; };
 		ACE3A6D22C46A1E400D147CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE3A6D12C46A1E400D147CB /* SceneDelegate.swift */; };
 		ACE3A6D42C46A1E400D147CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE3A6D32C46A1E400D147CB /* ViewController.swift */; };
-		ACE3A6D72C46A1E400D147CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE3A6D52C46A1E400D147CB /* Main.storyboard */; };
 		ACE3A6D92C46A1E600D147CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACE3A6D82C46A1E600D147CB /* Assets.xcassets */; };
 		ACE3A6DC2C46A1E600D147CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE3A6DA2C46A1E600D147CB /* LaunchScreen.storyboard */; };
+		ACE3A6E92C46A2D100D147CB /* WealthListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE3A6E82C46A2D100D147CB /* WealthListViewController.swift */; };
+		ACE3A6EB2C46A63700D147CB /* WealthTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE3A6EA2C46A63700D147CB /* WealthTableViewCell.swift */; };
+		ACE3A6ED2C46B89F00D147CB /* InterestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE3A6EC2C46B89E00D147CB /* InterestView.swift */; };
+		ACE3A6EF2C46B92D00D147CB /* StartFromView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE3A6EE2C46B92D00D147CB /* StartFromView.swift */; };
+		ACE3A6F32C46C04500D147CB /* WealthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE3A6F22C46C04500D147CB /* WealthRepository.swift */; };
+		ACE3A6F62C46DBDF00D147CB /* StringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE3A6F52C46DBDF00D147CB /* StringFormatter.swift */; };
+		ACE3A6F82C46DD1200D147CB /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE3A6F72C46DD1200D147CB /* ColorExtension.swift */; };
+		ACE3A6FA2C46E1E900D147CB /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE3A6F92C46E1E900D147CB /* CustomSegmentedControl.swift */; };
+		ACED564F2C4B900D00CD8A35 /* PaymentMethodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACED564E2C4B900D00CD8A35 /* PaymentMethodTableViewCell.swift */; };
+		ACED56512C4B933100CD8A35 /* DescriptionPaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACED56502C4B933100CD8A35 /* DescriptionPaymentTableViewCell.swift */; };
+		ACED56532C4BA7F000CD8A35 /* WealthPaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACED56522C4BA7F000CD8A35 /* WealthPaymentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC2FCC692C47B38100ECB32E /* WealthDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthDetailViewController.swift; sourceTree = "<group>"; };
+		AC2FCC6B2C47E29200ECB32E /* AmountInputTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountInputTextFieldView.swift; sourceTree = "<group>"; };
+		AC2FCC722C48390E00ECB32E /* RolloverSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RolloverSheetViewController.swift; sourceTree = "<group>"; };
+		AC2FCC752C483C6500ECB32E /* WebviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebviewViewController.swift; sourceTree = "<group>"; };
+		AC52D32F2C490770000ACE78 /* WealthListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthListViewModel.swift; sourceTree = "<group>"; };
+		AC52D3312C4936F1000ACE78 /* RolloverOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RolloverOptions.swift; sourceTree = "<group>"; };
+		AC52D3342C493F44000ACE78 /* WealthPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthPaymentViewController.swift; sourceTree = "<group>"; };
+		AC52D3382C495563000ACE78 /* PaymentMethodCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodCardView.swift; sourceTree = "<group>"; };
+		AC52D33A2C4956AA000ACE78 /* CollapsibleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewCell.swift; sourceTree = "<group>"; };
+		AC52D33C2C498320000ACE78 /* OptionRolloverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionRolloverTableViewCell.swift; sourceTree = "<group>"; };
 		ACE3A6CC2C46A1E400D147CB /* neobank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = neobank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE3A6CF2C46A1E400D147CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACE3A6D12C46A1E400D147CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ACE3A6D32C46A1E400D147CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ACE3A6D62C46A1E400D147CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACE3A6D82C46A1E600D147CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACE3A6DB2C46A1E600D147CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACE3A6DD2C46A1E600D147CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACE3A6E82C46A2D100D147CB /* WealthListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthListViewController.swift; sourceTree = "<group>"; };
+		ACE3A6EA2C46A63700D147CB /* WealthTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthTableViewCell.swift; sourceTree = "<group>"; };
+		ACE3A6EC2C46B89E00D147CB /* InterestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestView.swift; sourceTree = "<group>"; };
+		ACE3A6EE2C46B92D00D147CB /* StartFromView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartFromView.swift; sourceTree = "<group>"; };
+		ACE3A6F22C46C04500D147CB /* WealthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthRepository.swift; sourceTree = "<group>"; };
+		ACE3A6F52C46DBDF00D147CB /* StringFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFormatter.swift; sourceTree = "<group>"; };
+		ACE3A6F72C46DD1200D147CB /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		ACE3A6F92C46E1E900D147CB /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		ACED564E2C4B900D00CD8A35 /* PaymentMethodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodTableViewCell.swift; sourceTree = "<group>"; };
+		ACED56502C4B933100CD8A35 /* DescriptionPaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionPaymentTableViewCell.swift; sourceTree = "<group>"; };
+		ACED56522C4BA7F000CD8A35 /* WealthPaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthPaymentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +77,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC2FCC6F2C4838D200ECB32E /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				AC2FCC722C48390E00ECB32E /* RolloverSheetViewController.swift */,
+			);
+			path = BottomSheet;
+			sourceTree = "<group>";
+		};
+		AC2FCC742C483C5A00ECB32E /* Webview */ = {
+			isa = PBXGroup;
+			children = (
+				AC2FCC752C483C6500ECB32E /* WebviewViewController.swift */,
+			);
+			path = Webview;
+			sourceTree = "<group>";
+		};
+		AC52D32D2C49074A000ACE78 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				ACE3A6EA2C46A63700D147CB /* WealthTableViewCell.swift */,
+				AC52D33A2C4956AA000ACE78 /* CollapsibleTableViewCell.swift */,
+				AC52D33C2C498320000ACE78 /* OptionRolloverTableViewCell.swift */,
+				ACED564E2C4B900D00CD8A35 /* PaymentMethodTableViewCell.swift */,
+				ACED56502C4B933100CD8A35 /* DescriptionPaymentTableViewCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		AC52D32E2C490759000ACE78 /* WealthList */ = {
+			isa = PBXGroup;
+			children = (
+				ACE3A6E82C46A2D100D147CB /* WealthListViewController.swift */,
+				AC52D32F2C490770000ACE78 /* WealthListViewModel.swift */,
+			);
+			path = WealthList;
+			sourceTree = "<group>";
+		};
+		AC52D3332C493DBE000ACE78 /* WealthPayment */ = {
+			isa = PBXGroup;
+			children = (
+				AC52D3342C493F44000ACE78 /* WealthPaymentViewController.swift */,
+				ACED56522C4BA7F000CD8A35 /* WealthPaymentViewModel.swift */,
+			);
+			path = WealthPayment;
+			sourceTree = "<group>";
+		};
 		ACE3A6C32C46A1E400D147CB = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +142,77 @@
 		ACE3A6CE2C46A1E400D147CB /* neobank */ = {
 			isa = PBXGroup;
 			children = (
+				ACE3A6F42C46DBCF00D147CB /* Helper */,
+				ACE3A6E62C46A25100D147CB /* Services */,
+				ACE3A6E52C46A24700D147CB /* Models */,
+				ACE3A6E42C46A23700D147CB /* Components */,
+				ACE3A6E32C46A21E00D147CB /* Screens */,
 				ACE3A6CF2C46A1E400D147CB /* AppDelegate.swift */,
 				ACE3A6D12C46A1E400D147CB /* SceneDelegate.swift */,
 				ACE3A6D32C46A1E400D147CB /* ViewController.swift */,
-				ACE3A6D52C46A1E400D147CB /* Main.storyboard */,
 				ACE3A6D82C46A1E600D147CB /* Assets.xcassets */,
 				ACE3A6DA2C46A1E600D147CB /* LaunchScreen.storyboard */,
 				ACE3A6DD2C46A1E600D147CB /* Info.plist */,
 			);
 			path = neobank;
+			sourceTree = "<group>";
+		};
+		ACE3A6E32C46A21E00D147CB /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				AC2FCC742C483C5A00ECB32E /* Webview */,
+				AC2FCC6F2C4838D200ECB32E /* BottomSheet */,
+				ACE3A6E72C46A29D00D147CB /* Wealth */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		ACE3A6E42C46A23700D147CB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				ACE3A6EC2C46B89E00D147CB /* InterestView.swift */,
+				ACE3A6EE2C46B92D00D147CB /* StartFromView.swift */,
+				ACE3A6F92C46E1E900D147CB /* CustomSegmentedControl.swift */,
+				AC2FCC6B2C47E29200ECB32E /* AmountInputTextFieldView.swift */,
+				AC52D3382C495563000ACE78 /* PaymentMethodCardView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		ACE3A6E52C46A24700D147CB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ACE3A6E62C46A25100D147CB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ACE3A6F22C46C04500D147CB /* WealthRepository.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		ACE3A6E72C46A29D00D147CB /* Wealth */ = {
+			isa = PBXGroup;
+			children = (
+				AC52D3332C493DBE000ACE78 /* WealthPayment */,
+				AC52D32E2C490759000ACE78 /* WealthList */,
+				AC52D32D2C49074A000ACE78 /* TableView */,
+				AC2FCC692C47B38100ECB32E /* WealthDetailViewController.swift */,
+			);
+			path = Wealth;
+			sourceTree = "<group>";
+		};
+		ACE3A6F42C46DBCF00D147CB /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				ACE3A6F52C46DBDF00D147CB /* StringFormatter.swift */,
+				ACE3A6F72C46DD1200D147CB /* ColorExtension.swift */,
+				AC52D3312C4936F1000ACE78 /* RolloverOptions.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +275,6 @@
 			files = (
 				ACE3A6DC2C46A1E600D147CB /* LaunchScreen.storyboard in Resources */,
 				ACE3A6D92C46A1E600D147CB /* Assets.xcassets in Resources */,
-				ACE3A6D72C46A1E400D147CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +285,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACE3A6EB2C46A63700D147CB /* WealthTableViewCell.swift in Sources */,
 				ACE3A6D42C46A1E400D147CB /* ViewController.swift in Sources */,
+				ACE3A6F32C46C04500D147CB /* WealthRepository.swift in Sources */,
+				AC2FCC6C2C47E29200ECB32E /* AmountInputTextFieldView.swift in Sources */,
+				AC52D33B2C4956AA000ACE78 /* CollapsibleTableViewCell.swift in Sources */,
+				AC2FCC6A2C47B38100ECB32E /* WealthDetailViewController.swift in Sources */,
+				AC2FCC762C483C6500ECB32E /* WebviewViewController.swift in Sources */,
+				ACE3A6ED2C46B89F00D147CB /* InterestView.swift in Sources */,
+				ACE3A6E92C46A2D100D147CB /* WealthListViewController.swift in Sources */,
+				AC52D33D2C498320000ACE78 /* OptionRolloverTableViewCell.swift in Sources */,
+				ACE3A6EF2C46B92D00D147CB /* StartFromView.swift in Sources */,
+				ACED56512C4B933100CD8A35 /* DescriptionPaymentTableViewCell.swift in Sources */,
+				AC52D3302C490770000ACE78 /* WealthListViewModel.swift in Sources */,
 				ACE3A6D02C46A1E400D147CB /* AppDelegate.swift in Sources */,
+				AC52D3392C495563000ACE78 /* PaymentMethodCardView.swift in Sources */,
+				AC2FCC732C48390E00ECB32E /* RolloverSheetViewController.swift in Sources */,
 				ACE3A6D22C46A1E400D147CB /* SceneDelegate.swift in Sources */,
+				ACED564F2C4B900D00CD8A35 /* PaymentMethodTableViewCell.swift in Sources */,
+				ACE3A6F82C46DD1200D147CB /* ColorExtension.swift in Sources */,
+				AC52D3322C4936F1000ACE78 /* RolloverOptions.swift in Sources */,
+				ACE3A6F62C46DBDF00D147CB /* StringFormatter.swift in Sources */,
+				AC52D3352C493F44000ACE78 /* WealthPaymentViewController.swift in Sources */,
+				ACED56532C4BA7F000CD8A35 /* WealthPaymentViewModel.swift in Sources */,
+				ACE3A6FA2C46E1E900D147CB /* CustomSegmentedControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		ACE3A6D52C46A1E400D147CB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ACE3A6D62C46A1E400D147CB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ACE3A6DA2C46A1E600D147CB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -218,7 +378,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -275,7 +435,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -297,7 +457,6 @@
 				INFOPLIST_FILE = neobank/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,7 +484,6 @@
 				INFOPLIST_FILE = neobank/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
