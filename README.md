@@ -7,8 +7,10 @@
 - **Wealth Detail** 💰
 - **Wealth Payment Page** 💳
 
-## Tech Stack
+## Disclaimer
+This app was developed based on specific requirements. Some icons may differ due to difficulty in sourcing the exact assets. If provided with the necessary assets, the UI will be made similar.
 
+## Tech Stack
 - **Language**: Swift
 - **UI Framework**: UIKit (Programmatically)
 - **Architecture**: MVVM
@@ -47,4 +49,5 @@ Navigate to the cloned directory and open neobank-ios.xcodeproj with Xcode
 This project requires the following:
 
 -iOS 16.4+ 
+
 -Xcode 15.2

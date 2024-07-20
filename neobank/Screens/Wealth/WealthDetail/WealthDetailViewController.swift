@@ -19,7 +19,6 @@ class WealthDetailViewController: UIViewController, UIGestureRecognizerDelegate 
     private let topView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        
         return view
     }()
     
@@ -314,7 +313,7 @@ class WealthDetailViewController: UIViewController, UIGestureRecognizerDelegate 
         ///
         view.backgroundColor = .white
         view.addSubview(topView)
-        topView.addSubview(btnBack)
+        view.addSubview(btnBack)
         topView.addSubview(lblTitle)
         topView.addSubview(lblInterest)
         topView.addSubview(lblTotalMonth)
@@ -349,8 +348,8 @@ class WealthDetailViewController: UIViewController, UIGestureRecognizerDelegate 
             topView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             topView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             
-            btnBack.widthAnchor.constraint(equalToConstant: 20), // Example width constraint
-            btnBack.heightAnchor.constraint(equalToConstant: 20), // Example he
+            btnBack.widthAnchor.constraint(equalToConstant: 20),
+            btnBack.heightAnchor.constraint(equalToConstant: 20),
             
             // Back button constraints
             btnBack.topAnchor.constraint(equalTo: topView.topAnchor, constant: 8),
