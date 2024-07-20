@@ -76,7 +76,7 @@ class WealthListViewController: UIViewController {
                     self.segmentedControl.removeAllSegments()
                     // set how many showed segmented from response API & set title
                     for (index, productGroup) in self.viewModel.wealthData?.data.enumerated() ?? [].enumerated() {
-                        self.segmentedControl.insertSegment(withTitle: productGroup.productGroupName, at: index, animated: false)
+                        self.segmentedControl.insertSegment(withTitle: self.viewModel.getProductName(productGroup.productGroupName), at: index, animated: false)
                     }
                     self.segmentedControl.selectedSegmentIndex = 0
                     self.segmentedControl.sendActions(for: .valueChanged)
@@ -141,7 +141,7 @@ extension WealthListViewController: UITableViewDataSource, UITableViewDelegate {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         titleLabel.textColor = UIColor.TitleColor
-        titleLabel.text = viewModel.filteredData[section].productGroupName
+        titleLabel.text = viewModel.getProductName(viewModel.filteredData[section].productGroupName)
         
         headerView.addSubview(titleLabel)
         

@@ -37,4 +37,16 @@ class WealthListViewModel {
             filteredData = []
         }
     }
+    
+    func getProductName(_ name: String) -> String {
+        let lowercasedName = name.lowercased()
+        switch lowercasedName {
+        case "flexible":
+            return "Fleksibel"
+        case "fixed income":
+            return "Bunga tetap"
+        default:
+            return name
+        }
+    }
 }

@@ -197,10 +197,10 @@
 		ACE3A6E72C46A29D00D147CB /* Wealth */ = {
 			isa = PBXGroup;
 			children = (
-				AC52D3332C493DBE000ACE78 /* WealthPayment */,
 				AC52D32E2C490759000ACE78 /* WealthList */,
+				ACED56542C4BCB2500CD8A35 /* WealthDetail */,
+				AC52D3332C493DBE000ACE78 /* WealthPayment */,
 				AC52D32D2C49074A000ACE78 /* TableView */,
-				AC2FCC692C47B38100ECB32E /* WealthDetailViewController.swift */,
 			);
 			path = Wealth;
 			sourceTree = "<group>";
@@ -213,6 +213,14 @@
 				AC52D3312C4936F1000ACE78 /* RolloverOptions.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		ACED56542C4BCB2500CD8A35 /* WealthDetail */ = {
+			isa = PBXGroup;
+			children = (
+				AC2FCC692C47B38100ECB32E /* WealthDetailViewController.swift */,
+			);
+			path = WealthDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

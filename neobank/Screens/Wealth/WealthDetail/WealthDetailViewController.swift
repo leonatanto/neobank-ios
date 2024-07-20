@@ -262,6 +262,10 @@ class WealthDetailViewController: UIViewController, UIGestureRecognizerDelegate 
         btnBack.addTarget(self, action: #selector(onBackButtonPressed), for: .touchUpInside)
         btnRollover.addTarget(self, action: #selector(onPressRollover), for: .touchUpInside)
         btnOpenNow.addTarget(self, action: #selector(onNavigateToPayment), for: .touchUpInside)
+        
+        lblRolloverValue.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onPressRollover))
+        lblRolloverValue.addGestureRecognizer(tapGesture)
     }
     
     private func setupNavigationBar() {
@@ -440,11 +444,6 @@ class WealthDetailViewController: UIViewController, UIGestureRecognizerDelegate 
 }
 
 extension WealthDetailViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder() // Dismisses when tap return
-        return true
-    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true) // Dismisses when tap outside keyboard
     }
