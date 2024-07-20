@@ -161,7 +161,7 @@ class WealthDetailViewController: UIViewController, UIGestureRecognizerDelegate 
     private let lblInterestValue: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Rp0.00"
+        label.text = "Rp0,00"
         label.textColor = UIColor.TitleColor
         label.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         return label
