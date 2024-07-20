@@ -131,6 +131,25 @@ class WealthDetailViewController: UIViewController, UIGestureRecognizerDelegate 
         return view
     }()
     
+    private let lblDueDate: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Jatuh Tempo"
+        label.textColor = UIColor.LightGrayColor
+        label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        return label
+    }()
+    
+    private let lblDueDateValue: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "28/05/2024"
+        label.textAlignment = .left
+        label.textColor = UIColor.SubtitleColor
+        label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        return label
+    }()
+    
     private let lblInterestEstimation: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -143,7 +162,7 @@ class WealthDetailViewController: UIViewController, UIGestureRecognizerDelegate 
     private let lblInterestValue: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Rp636,98"
+        label.text = "Rp0.00"
         label.textColor = UIColor.TitleColor
         label.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         return label
@@ -201,11 +220,11 @@ class WealthDetailViewController: UIViewController, UIGestureRecognizerDelegate 
         button.translatesAutoresizingMaskIntoConstraints = false
         
         // Create attributed string
-        let fullText = "Saya telah membaca dan menyetujui Deposito Tnc"
+        let fullText = "Saya telah membaca dan menyetujui «FLEXI TnC»"
         let attributedString = NSMutableAttributedString(string: fullText)
         
         // Add underline and make it clickable
-        let range = (fullText as NSString).range(of: "Deposito Tnc")
+        let range = (fullText as NSString).range(of: "«FLEXI TnC»")
         attributedString.addAttribute(.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: range)
         attributedString.addAttribute(.foregroundColor, value: UIColor.blue, range: range)
         
@@ -295,30 +314,32 @@ class WealthDetailViewController: UIViewController, UIGestureRecognizerDelegate 
         ///
         view.backgroundColor = .white
         view.addSubview(topView)
-        view.addSubview(btnBack)
-        view.addSubview(lblTitle)
-        view.addSubview(lblInterest)
-        view.addSubview(lblTotalMonth)
-        view.addSubview(lblDescription)
+        topView.addSubview(btnBack)
+        topView.addSubview(lblTitle)
+        topView.addSubview(lblInterest)
+        topView.addSubview(lblTotalMonth)
+        topView.addSubview(lblDescription)
         ///
         /// ======= REMARK BOTTOM SECTION =======
         ///
         view.addSubview(bottomView)
-        view.addSubview(lblTotalDeposit)
-        view.addSubview(tfAmount)
-        view.addSubview(dashedLineView)
-        view.addSubview(lblInterestEstimation)
-        view.addSubview(lblInterestValue)
+        bottomView.addSubview(lblTotalDeposit)
+        bottomView.addSubview(tfAmount)
+        bottomView.addSubview(dashedLineView)
+        bottomView.addSubview(lblDueDate)
+        bottomView.addSubview(lblDueDateValue)
+        bottomView.addSubview(lblInterestEstimation)
+        bottomView.addSubview(lblInterestValue)
         ///
         /// ======= REMARK ROLLOVER  SECTION =======
         ///
         view.addSubview(rolloverView)
-        view.addSubview(lblRollover)
-        view.addSubview(lblRolloverValue)
-        view.addSubview(btnRollover)
-        view.addSubview(btnOpenNow)
-        view.addSubview(btnTnc)
-        view.addSubview(btnTncImage)
+        rolloverView.addSubview(lblRollover)
+        rolloverView.addSubview(lblRolloverValue)
+        rolloverView.addSubview(btnRollover)
+        rolloverView.addSubview(btnOpenNow)
+        rolloverView.addSubview(btnTnc)
+        rolloverView.addSubview(btnTncImage)
     }
     
     private func setupConstraints() {
@@ -368,8 +389,14 @@ class WealthDetailViewController: UIViewController, UIGestureRecognizerDelegate 
             tfAmount.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
             tfAmount.heightAnchor.constraint(equalToConstant: 180),
             
+            // Due Date Label
+            lblDueDate.topAnchor.constraint(equalTo: tfAmount.bottomAnchor, constant: 16),
+            lblDueDate.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16),
+            lblDueDateValue.topAnchor.constraint(equalTo: tfAmount.bottomAnchor, constant: 16),
+            lblDueDateValue.leadingAnchor.constraint(equalTo: lblDueDate.trailingAnchor, constant: 8),
+            
             // Separator constraints
-            dashedLineView.topAnchor.constraint(equalTo: tfAmount.bottomAnchor, constant: 16),
+            dashedLineView.topAnchor.constraint(equalTo: lblDueDate.bottomAnchor, constant: 16),
             dashedLineView.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16),
             dashedLineView.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
             dashedLineView.heightAnchor.constraint(equalToConstant: 1),
@@ -428,7 +455,9 @@ class WealthDetailViewController: UIViewController, UIGestureRecognizerDelegate 
     
     @objc private func onNavigateToPayment() {
         let nextVc = WealthPaymentViewController()
-        nextVc.amount = "Rp\(self.amount)"
+        if amount != "" {
+            nextVc.amount = "Rp\(self.amount)"
+        }
         navigationController?.pushViewController(nextVc, animated: true)
     }
     

@@ -41,7 +41,7 @@ class AmountInputTextFieldView: UIView, UITextFieldDelegate {
         let label = UILabel()
         label.text = "Minimum deposito Rp100.000"
         label.textColor = UIColor.GrayColor
-        label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         
         return label
     }()

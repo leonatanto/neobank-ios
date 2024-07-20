@@ -19,6 +19,27 @@ class PaymentMethodCardView: UIView {
         return label
     }()
     
+    private lazy var lblRecommendation: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .left
+        label.textColor = UIColor.TintColor
+        label.font = UIFont.systemFont(ofSize: 12)
+        label.text = "Rekomendasi"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private lazy var viewLblRecommendation: UIView = {
+        let view = UIView()
+        view.layer.cornerRadius = 8
+        view.layer.masksToBounds = true
+        view.layer.borderWidth = 1.0
+        view.layer.borderColor = UIColor.TintColor.cgColor
+        view.layer.backgroundColor = UIColor.LightTintColor.cgColor
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     private lazy var lblSavings: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
@@ -63,20 +84,36 @@ class PaymentMethodCardView: UIView {
     
     private func setupViews() {
         addSubview(lblTitle)
+        addSubview(viewLblRecommendation)
+        addSubview(lblRecommendation)
         addSubview(lblSavings)
         addSubview(lblActiveBalance)
         addSubview(btnPay)
+        viewLblRecommendation.addSubview(lblRecommendation)
+        
+        lblTitle.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        viewLblRecommendation.setContentHuggingPriority(.defaultLow, for: .horizontal)
+            
         
         NSLayoutConstraint.activate([
             // Title Label Constraints
             lblTitle.topAnchor.constraint(equalTo: topAnchor, constant: 16),
             lblTitle.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            lblTitle.trailingAnchor.constraint(equalTo: btnPay.leadingAnchor, constant: -16),
+            lblTitle.trailingAnchor.constraint(equalTo: viewLblRecommendation.leadingAnchor, constant: -8),
+            
+            // Recommendation Constraints
+            viewLblRecommendation.centerYAnchor.constraint(equalTo: lblTitle.centerYAnchor),
+            viewLblRecommendation.leadingAnchor.constraint(equalTo: lblTitle.trailingAnchor, constant: 0),
+            
+            lblRecommendation.topAnchor.constraint(equalTo: viewLblRecommendation.topAnchor, constant: 4),
+            lblRecommendation.leadingAnchor.constraint(equalTo: viewLblRecommendation.leadingAnchor, constant: 8),
+            lblRecommendation.trailingAnchor.constraint(equalTo: viewLblRecommendation.trailingAnchor, constant: -8),
+            lblRecommendation.bottomAnchor.constraint(equalTo: viewLblRecommendation.bottomAnchor, constant: -4),
             
             // Detail Label Constraints
-            lblSavings.topAnchor.constraint(equalTo: lblTitle.bottomAnchor, constant: 8),
+            lblSavings.topAnchor.constraint(equalTo: lblTitle.bottomAnchor, constant: 12),
             lblSavings.leadingAnchor.constraint(equalTo: lblTitle.leadingAnchor),
-            lblSavings.trailingAnchor.constraint(equalTo: lblTitle.trailingAnchor),
+            lblSavings.trailingAnchor.constraint(equalTo: btnPay.leadingAnchor, constant: -8),
             
             // Status Label Constraints
             lblActiveBalance.topAnchor.constraint(equalTo: lblSavings.bottomAnchor, constant: 8),
@@ -85,10 +122,8 @@ class PaymentMethodCardView: UIView {
             
             // Action Button Constraints
             btnPay.topAnchor.constraint(equalTo: topAnchor, constant: 32),
-            //            btnPay.leadingAnchor.constraint(equalTo: lblSavings.trailingAnchor, constant: 60),
             btnPay.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24),
             btnPay.widthAnchor.constraint(equalToConstant: 60),
-            //            btnPay.heightAnchor.constraint(equalToConstant: 20),
             btnPay.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -32)
         ])
     }

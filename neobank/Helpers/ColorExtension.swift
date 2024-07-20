@@ -11,6 +11,7 @@ import UIKit
 extension UIColor {
     static let GrowthColor = UIColor(hex: "#0EBE5A")
     static let TintColor = UIColor(hex: "#FFD400")
+    static let LightTintColor = UIColor(hex: "#FBF9E3")
     static let TitleColor = UIColor(hex: "#000000")
     static let SubtitleColor = UIColor(hex: "#515151")
     static let GrayColor = UIColor(hex: "c6c6c6")

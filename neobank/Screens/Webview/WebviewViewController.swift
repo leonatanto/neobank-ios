@@ -26,7 +26,7 @@ class WebviewViewController: UIViewController {
             webView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
         
-        if let url = URL(string: "https://www.google.com") {
+        if let url = URL(string: "https://www.bankneocommerce.co.id/id/individual/savings/neo-wow-flexi") {
             let request = URLRequest(url: url)
             webView.load(request)
         }
