@@ -34,7 +34,6 @@ The project is organized into the following folders:
   Provides utility functions and extensions to assist with various tasks throughout the application.
 
 ## Installation
-
 To set up the project on your local machine, follow these steps:
 
 1. **Clone the repository** :package:  
@@ -44,10 +43,15 @@ To set up the project on your local machine, follow these steps:
 2. Open the project in Xcode :iphone:
 Navigate to the cloned directory and open neobank-ios.xcodeproj with Xcode
 
-
 ## Requirements
 This project requires the following:
 
 -iOS 16.4+ 
 
 -Xcode 15.2
+
+## Demo App
+https://github.com/user-attachments/assets/e39db752-9814-4850-848f-65fd51ed6675
+
+
+
