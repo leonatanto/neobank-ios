@@ -160,12 +160,12 @@ extension WealthListViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension WealthListViewController: WealthTableViewCellDelegate {
     func onPressOpen(at indexPath: IndexPath) {
-        let detailVC = WealthDetailViewController()
+        let nextVc = WealthDetailViewController()
         let product = viewModel.filteredData[indexPath.section].productList[indexPath.row]
         
-        detailVC.interest = Double(product.rate)
-        detailVC.detailTitle = product.productName
+        nextVc.interest = Double(product.rate)
+        nextVc.detailTitle = product.productName
         
-        navigationController?.pushViewController(detailVC, animated: true)
+        navigationController?.pushViewController(nextVc, animated: true)
     }
 }

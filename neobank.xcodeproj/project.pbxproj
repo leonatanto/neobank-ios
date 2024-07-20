@@ -142,7 +142,7 @@
 		ACE3A6CE2C46A1E400D147CB /* neobank */ = {
 			isa = PBXGroup;
 			children = (
-				ACE3A6F42C46DBCF00D147CB /* Helper */,
+				ACE3A6F42C46DBCF00D147CB /* Helpers */,
 				ACE3A6E62C46A25100D147CB /* Services */,
 				ACE3A6E52C46A24700D147CB /* Models */,
 				ACE3A6E42C46A23700D147CB /* Components */,
@@ -205,14 +205,14 @@
 			path = Wealth;
 			sourceTree = "<group>";
 		};
-		ACE3A6F42C46DBCF00D147CB /* Helper */ = {
+		ACE3A6F42C46DBCF00D147CB /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				ACE3A6F52C46DBDF00D147CB /* StringFormatter.swift */,
 				ACE3A6F72C46DD1200D147CB /* ColorExtension.swift */,
 				AC52D3312C4936F1000ACE78 /* RolloverOptions.swift */,
 			);
-			path = Helper;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		ACED56542C4BCB2500CD8A35 /* WealthDetail */ = {

@@ -12,6 +12,7 @@ class WealthDetailViewController: UIViewController, UIGestureRecognizerDelegate 
     var interest: Double = 7.5
     var detailTitle = "Deposito FLEXI 1 bulan"
     private var selectedRollover: Int = 0
+    private var amount = ""
     
     /// ======= REMARK TOP SECTION =======
     ///
@@ -247,6 +248,8 @@ class WealthDetailViewController: UIViewController, UIGestureRecognizerDelegate 
             guard let valueWithoutGroupingSeparator = newValue.replacingOccurrences(of: ".", with: "") as String? else { return }
             var monthlyInterest = 0.0
             
+            self.amount = newValue
+            
             if let doubleValue = Double(valueWithoutGroupingSeparator) {
                 let interestRate = 7.5 / 100
                 monthlyInterest = (doubleValue * interestRate) / 12
@@ -419,13 +422,14 @@ class WealthDetailViewController: UIViewController, UIGestureRecognizerDelegate 
     }
     
     @objc private func onNavigateToWebview() {
-        let detailVC = WebviewViewController()
-        navigationController?.pushViewController(detailVC, animated: true)
+        let nextVc = WebviewViewController()
+        navigationController?.pushViewController(nextVc, animated: true)
     }
     
     @objc private func onNavigateToPayment() {
-        let detailVC = WealthPaymentViewController()
-        navigationController?.pushViewController(detailVC, animated: true)
+        let nextVc = WealthPaymentViewController()
+        nextVc.amount = "Rp\(self.amount)"
+        navigationController?.pushViewController(nextVc, animated: true)
     }
     
     @objc private func onPressRollover() {

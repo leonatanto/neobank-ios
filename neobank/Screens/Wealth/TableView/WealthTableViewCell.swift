@@ -59,13 +59,6 @@ class WealthTableViewCell: UITableViewCell {
         return label
     }()
     
-    private let separatorView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .white
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
     private let horizontalStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
@@ -131,7 +124,6 @@ class WealthTableViewCell: UITableViewCell {
         contentView.addSubview(titleLabel)
         contentView.addSubview(popularLabel)
         contentView.addSubview(descriptionLabel)
-        contentView.addSubview(separatorView)
         contentView.addSubview(horizontalStackView)
         
         horizontalStackView.addArrangedSubview(interestView)
@@ -152,7 +144,7 @@ class WealthTableViewCell: UITableViewCell {
             topView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
             topView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
             topView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
-            topView.bottomAnchor.constraint(equalTo: separatorView.topAnchor, constant: -8),
+            topView.bottomAnchor.constraint(equalTo: horizontalStackView.topAnchor, constant: -8),
             
             // Title
             titleLabel.topAnchor.constraint(equalTo: topView.topAnchor, constant: 8),
@@ -170,13 +162,8 @@ class WealthTableViewCell: UITableViewCell {
             descriptionLabel.trailingAnchor.constraint(equalTo: topView.trailingAnchor, constant: -16),
             descriptionLabel.bottomAnchor.constraint(equalTo: topView.bottomAnchor, constant: -8),
             
-            // Separator view constraints
-            separatorView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            separatorView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            separatorView.heightAnchor.constraint(equalToConstant: 1),
-            
             // Horizontal stack view constraints
-            horizontalStackView.topAnchor.constraint(equalTo: separatorView.bottomAnchor, constant: 0),
+            horizontalStackView.topAnchor.constraint(equalTo: topView.bottomAnchor, constant: 0),
             horizontalStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             horizontalStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             horizontalStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),

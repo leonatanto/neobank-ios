@@ -11,6 +11,7 @@ class WealthPaymentViewController: UIViewController, UIGestureRecognizerDelegate
     private var expandedSections: Set<Int> = []
     private var countdownTimer: Timer?
     private var remainingTime: TimeInterval = 24 * 60 * 60 // 24 hours in second
+    var amount = "Rp100.000"
     
     private lazy var topContainer: UIView = {
         let view = UIView()
@@ -124,6 +125,7 @@ class WealthPaymentViewController: UIViewController, UIGestureRecognizerDelegate
         setupNavigationBar()
         setupUI()
         startCountdown()
+        self.lblBanner2.text = self.amount
     }
     
     private func setupNavigationBar() {
